@@ -2,7 +2,6 @@ import 'dart:io';
 import 'enum_bus_menu.dart';
 
 
-
 void main(List<String> arguments) {
   while(true){
     MenuOperations busMenu = getMenu();
@@ -11,12 +10,12 @@ void main(List<String> arguments) {
 }
 
 
-
 void showMenu() {
   for(MenuOperations busMenu in MenuOperations.values ){
     stdout.write('${busMenu.value}:${busMenu.title}\t');
   }
 }
+
 MenuOperations getMenu(){
   int? menu;
   while (true) {
@@ -31,6 +30,7 @@ MenuOperations getMenu(){
   }
 
 }
+
 void mainMenu({required MenuOperations menu}){
 
   switch(menu){
